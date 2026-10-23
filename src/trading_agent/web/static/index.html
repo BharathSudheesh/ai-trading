@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trading Agent</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="rail">
+      <div class="brand">
+        <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
+          <rect width="32" height="32" rx="6" fill="currentColor"/>
+          <path d="M6 22l7-8 5 4 8-10" fill="none" stroke="var(--paper)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>Trading Agent</span>
+      </div>
+      <nav id="nav" aria-label="Sections">
+        <a href="#/desk" data-route="desk">Desk</a>
+        <a href="#/profile" data-route="profile">Profile</a>
+        <a href="#/backtest" data-route="backtest">Backtest</a>
+        <a href="#/feedback" data-route="feedback">Feedback</a>
+      </nav>
+      <div class="rail-foot" id="railFoot"></div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="who">
+          <label for="profileSelect">Investor</label>
+          <select id="profileSelect"></select>
+        </div>
+        <div class="topbar-right">
+          <span id="sourceBadge" class="badge"></span>
+          <button id="bellBtn" class="ghost" aria-label="Alerts">Alerts <span id="bellCount" class="count" hidden>0</span></button>
+        </div>
+      </header>
+      <div id="banner"></div>
+      <div id="view" aria-live="polite"></div>
+      <footer class="disclaimer" id="disclaimer"></footer>
+    </main>
+  </div>
+  <div id="toast" role="status"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
